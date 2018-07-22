@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="375.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nestla.tennis.league.scheduler.GUI.EditTeamsController">
+   <children>
+      <VBox prefHeight="375.0" prefWidth="640.0">
+         <children>
+            <TableView fx:id="teamsTable" onMousePressed="#handleMousePressed" prefHeight="447.0" prefWidth="640.0">
+              <columns>
+                <TableColumn fx:id="teamNameCol" minWidth="5.0" prefWidth="340.0" text="Team Name" />
+                  <TableColumn fx:id="clubNameCol" prefWidth="40.0" text="Club" />
+                  <TableColumn fx:id="divisionNameCol" prefWidth="40.0" text="Division" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox spacing="10.0">
+               <children>
+                  <Button fx:id="editTeamsBack" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="65.0" text="Back" />
+                  <TextField fx:id="editTeamName" prefHeight="25.0" prefWidth="167.0" promptText="Team Name" />
+                  <ComboBox fx:id="clubComboBox" prefHeight="25.0" prefWidth="129.0" promptText="Club" />
+                  <ComboBox fx:id="divisionComboBox" prefHeight="25.0" prefWidth="129.0" promptText="Division" />
+                  <Button fx:id="editTeamAddEdit" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="65.0" text="Add" />
+                  <Button fx:id="editTeamDelete" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="65.0" text="Delete" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vBoxContainer" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nestla.tennis.league.scheduler.GUI.ApplicationMainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem fx:id="menuNew" mnemonicParsing="false" onAction="#handleButtonAction" text="New" />
+            <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#handleButtonAction" text="Open…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#handleButtonAction" text="Save" />
+            <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" onAction="#handleButtonAction" text="Save As…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuQuit" mnemonicParsing="false" onAction="#handleButtonAction" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem fx:id="menuAboutTennisScheduler" mnemonicParsing="false" onAction="#handleButtonAction" text="About Tennis Scheduler" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="rootPane" maxWidth="-1.0" prefHeight="586.0" prefWidth="640.0" VBox.vgrow="ALWAYS" />
+  </children>
+</VBox>
